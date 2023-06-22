@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <form onsubmit="converter(event)">
+        <label for="numero">Insira o valor que será convertido.</label>
+        <input type="number" id="numero" name="numero" required>
+
+        <label for="categoria">Selecione a categoria:</label>
+        <select id="categoria" name="categoria">
+            <option value="">Selecione uma categoria...</option>
+            <option value="Comprimento">Comprimento</option>
+            <option value="Peso">Peso</option>
+            <option value="Temperatura">Temperatura</option>
+        </select>
+
+        <label for="opcoes1">Qual o tipo inicial da medida?</label>
+        <select id="opcoes1" name="opcoes1">
+        </select>
+
+        <label for="opcoes2">Para qual medida quer converter?</label>
+        <select id="opcoes2" name="opcoes2">
+        </select>
+
+        <input type="submit" value="Converter" class="submit"/>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
