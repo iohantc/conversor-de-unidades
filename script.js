@@ -1,59 +1,59 @@
 var conversoes = {
     Comprimento: {
-        metros: {
-            metros: function (valor) { return valor },
-            centimetros: function (valor) {
+        Metros: {
+            Metros: function (valor) { return valor },
+            Centimetros: function (valor) {
                 return valor * 100;
             },
-            polegadas: function (valor) {
+            Polegadas: function (valor) {
                 return valor * 39.37;
             },
         },
-        centimetros: {
-            centimetros: function (valor) { return valor },
-            metros: function (valor) {
+        Centimetros: {
+            Centimetros: function (valor) { return valor },
+            Metros: function (valor) {
                 return valor / 100;
             },
-            polegadas: function (valor) {
+            Polegadas: function (valor) {
                 return valor / 2.54;
             },
         },
-        polegadas: {
-            polegadas: function (valor) { return valor },
-            metros: function (valor) {
+        Polegadas: {
+            Polegadas: function (valor) { return valor },
+            Metros: function (valor) {
                 return valor / 39.37;
             },
-            centimetros: function (valor) {
+            Centimetros: function (valor) {
                 return valor * 2.54;
             },
         },
     },
 
     Peso: {
-        quilogramas: {
-            quilogramas: function (valor) { return valor },
-            gramas: function (valor) {
+        Quilogramas: {
+            Quilogramas: function (valor) { return valor },
+            Gramas: function (valor) {
                 return valor * 1000;
             },
-            libras: function (valor) {
+            Libras: function (valor) {
                 return valor * 2.20462;
             },
         },
-        gramas: {
-            gramas: function (valor) { return valor },
-            quilogramas: function (valor) {
+        Gramas: {
+            Gramas: function (valor) { return valor },
+            Quilogramas: function (valor) {
                 return valor / 1000;
             },
-            libras: function (valor) {
+            Libras: function (valor) {
                 return valor * 0.00220462;
             },
         },
-        libras: {
-            libras: function (valor) { return valor },
-            quilogramas: function (valor) {
+        Libras: {
+            Libras: function (valor) { return valor },
+            Quilogramas: function (valor) {
                 return valor / 2.20462;
             },
-            gramas: function (valor) {
+            Gramas: function (valor) {
                 return valor * 453.592;
             },
         },
@@ -113,9 +113,10 @@ function converter(event) {
     var tipoFinal = document.getElementById("opcoes2").value;
 
     if (categoria in conversoes && tipoInicial in conversoes[categoria] && tipoFinal in conversoes[categoria][tipoInicial]) {
-        alert(`${numero} ${tipoInicial} equivale a: ${conversoes[categoria][tipoInicial][tipoFinal](numero)} ${tipoFinal}.`)
+        saidaTexto.innerHTML = `${numero} ${tipoInicial} equivale a: ${conversoes[categoria][tipoInicial][tipoFinal](numero)} ${tipoFinal}.`
     } else {
-        alert(`Erro!\nVerifique se ${tipoInicial} e ${tipoFinal}\nSão da categoria: ${categoria}`);
+        saidaTexto.innerHTML =`Erro!\nVerifique se ${tipoInicial} e ${tipoFinal}\nSão da categoria: ${categoria}`
     }
 }
 
+var saidaTexto = document.getElementById("saidaTexto");

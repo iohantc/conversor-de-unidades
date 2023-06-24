@@ -1,9 +1,37 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #00464C; 
+    font-family: 'Poppins', sans-serif;
+}
+
+
 form{
     display: flex;
     flex-direction: column;
-    max-width: 30vh;
+    font-family: 'Montserrat', sans-serif;
+    /* max-width: 30vh; */
+    background-color: #FFB9B3;
+    padding: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 4%;
+    width: 50vh;
+    font-size: 18px;
 }
-.submit{
+
+label{
+    margin-top: 3%;
+}
+
+.botaoConverter{
     width: 50%;
     margin-top: 5%;
     margin-left: 50%;
