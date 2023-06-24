@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- nome da página -->
+    <title>Conversor de unidades</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,18 +13,24 @@
 </head>
 
 <body>
+    <!-- título principal da página -->
+    <h1>Conversor de Unidades</h1>
+
+     <!-- início do formulário. O onsubmit será executado quando o formulário for enviado -->
     <form onsubmit="converter(event)">
         <label for="numero" class="">Insira o valor que será convertido.</label>
         <input type="number" id="numero" name="numero" required>
-
+        
         <label for="categoria">Selecione a categoria:</label>
         <select id="categoria" name="categoria">
+             <!-- campo de seleção para escolher a categoria de conversão. ele é preenchido pelo javascript -->
             <option value="">Selecione uma categoria...</option>
             <option value="Comprimento">Comprimento</option>
             <option value="Peso">Peso</option>
             <option value="Temperatura">Temperatura</option>
         </select>
 
+        <!-- os campos de seleção são preenchidos dinamicamente pelo javascript -->
         <label for="opcoes1">Qual o tipo inicial da medida?</label>
         <select id="opcoes1" name="opcoes1">
         </select>
@@ -34,7 +41,7 @@
 
         <button type="submit" class="botaoConverter">Converter</button>
     </form>
-    <div id="saidaTexto"></div>
+    <div id="resultado" style="margin-top: 15px;"></div>
 
     <script src="script.js"></script>
 </body>

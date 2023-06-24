@@ -1,4 +1,5 @@
-body{
+/* estilo do corpo */
+body {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -6,33 +7,94 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #00464C; 
-    font-family: 'Poppins', sans-serif;
+    background-color: #00464C;
+    flex-direction: column;
+    /* configuração do corpo da página, com alinhamento centralizado, altura total da viewport, fundo azul e direção de coluna para os elementos internos */
 }
 
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    padding-bottom: 1%;
+    /* estilo do cabeçalho com a fonte Montserrat, cor branca e espaçamento inferior de 1% */
+}
 
-form{
+/* estilo do formulário */
+form {
     display: flex;
     flex-direction: column;
-    font-family: 'Montserrat', sans-serif;
-    /* max-width: 30vh; */
+    font-family: 'Poppins', sans-serif;
     background-color: #FFB9B3;
     padding: 20px;
     padding-top: 5px;
     padding-bottom: 5px;
     margin-left: auto;
     margin-right: auto;
-    border-radius: 4%;
+    border: 1px solid #001845;
+    border-radius: 5px;
     width: 50vh;
     font-size: 18px;
+    animation: mostrar 1s forwards;
+    animation-delay: 1s;
+    /* estilo do formulário com exibição em coluna, fundo laranja claro, espaçamento interno e externo, margens automáticas, borda e animação */
 }
 
-label{
-    margin-top: 3%;
+@keyframes mostrar {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+    /* animação para mostrar algo com transição de opacidade */
 }
 
-.botaoConverter{
+label {
+    margin-top: 5%;
+    margin-bottom: 3%;
+    width: 100%;
+    /* estilo das etiquetas com espaçamento superior e inferior, ocupando a largura total */
+}
+
+select,
+input {
+    font-family: 'Montserrat', sans-serif;
+    /* estilo das fontes usadas nos campos de seleção e entrada */
+}
+
+/* estilo do botão "Converter" */
+.botaoConverter {
     width: 50%;
     margin-top: 5%;
     margin-left: 50%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+    border: 1px solid #001845;
+    color: black;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    /* estilo do botão "Converter" com largura, margem superior e esquerda, fonte negrito, transição suave, cor de fundo e borda, e outros atributos */
+}
+
+.botaoConverter:hover {
+    transform: scale(1.1);
+    background-color: #FFB491;
+    color: #00464C;
+    /* estilo do botão "Converter" quando o cursor do mouse está sobre ele, com efeito de escala, cores de fundo e texto alteradas */
+}
+
+/* estilo da div "resultado" */
+#resultado {
+    background-color: #00464C; /* mesmo que a cor de fundo para esconder */
+    color: black;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #00464C;
+    font-family: 'Poppins', sans-serif;
+    /* estilo da div de resultado com cor de fundo, cor do texto, espaçamento interno e externo, borda e fonte definidos */
 }
