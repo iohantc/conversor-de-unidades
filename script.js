@@ -6,7 +6,6 @@ var conversoes = {
         Metros: {
             // Para cada unidade, temos funções de conversão para todas as outras unidades na mesma categoria. Isso se repete em todas as outras categorias
             Metros: function (valor) { return valor },
-            Metros: function (valor) { return valor },
             Centimetros: function (valor) {
                 return valor * 100;
             },
